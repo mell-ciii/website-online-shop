@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mellysa Online Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f4f4f4; /* Background for the page */
+        }
+
+        /* Header Styles */
+        header {
+            background: #003366; /* Dark Blue */
+            color: white;
+            padding: 8px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        header h1 a {
+            text-decoration: none;
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        header nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        header ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        header ul li {
+            margin: 0 20px;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 8px 15px;
+            background-color: #003366;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, padding 0.3s ease;
+        }
+
+        header ul li a:hover {
+            background-color: #0051a2;
+            padding: 8px 20px;
+        }
+
+        header ul li.active a {
+            font-weight: bold;
+        }
+
+        /* Home Section */
+        .home {
+            text-align: center;
+            margin: 0;
+            opacity: 0;
+            animation: slideInLeft 4s forwards;
+            background-image: url('https://images.pexels.com/photos/6214370/pexels-photo-6214370.jpeg');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .home h2 {
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* About Section */
+        .about {
+            text-align: center;
+            margin: 50px auto;
+            max-width: 800px;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #f1c40f, #e67e22); /* Gradient background */
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        .about h3 {
+            font-size: 28px;
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-transform: uppercase; /* Add some style */
+            letter-spacing: 2px; /* Add some space between letters */
+        }
+
+        .about p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: white;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .about .cta-button {
+            text-decoration: none;
+            background-color: #27ae60;
+            color: white;
+            font-size: 18px;
+            padding: 10px 25px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .about .cta-button:hover {
+            background-color: #2ecc71;
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+        }
+
+        footer small {
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1><a href="index.html">Mellysa Online Shop</a></h1>
+            <nav>
+                <ul>
+                    <li class="active"><a href="index.html">HOME</a></li>
+                    <li><a href="product.html">PRODUCT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section class="home">
+            <h2>WELCOME TO MY ONLINE SHOP MELLYSA</h2>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+            <h3>About Us</h3>
+            <p>Selamat datang di toko online shop Mellysa kami. Kami menyediakan berbagai produk terbaik dengan harga terjangkau dan kualitas terpercaya. Nikmati pengalaman belanja mudah dan nyaman bersama kami.</p>
+            <a href="product.html" class="cta-button">Explore Products</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <small>&copy; 2024 - Mellysa Online Shop. All Rights Reserved.</small>
+    </footer>
+
+</body>
+</html>

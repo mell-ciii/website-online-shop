@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mellysa Online Shop - Product</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure full height */
+        }
+
+        /* Header */
+        header {
+            background: #003366;
+            padding: 15px 0;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.6s ease-out;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        header h1 a {
+            text-decoration: none;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        header ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        header ul li {
+            margin: 0 20px;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        header ul li:hover a {
+            color: #ff8c00;
+        }
+
+        /* Product Section */
+        .product-section {
+            text-align: center;
+            margin: 50px 0;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        .product-section h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        /* Product Container */
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 0 20px;
+            padding-bottom: 50px;
+        }
+
+        /* Product Item */
+        .product-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            opacity: 0;
+            animation: fadeInProduct 0.8s forwards;
+        }
+
+        @keyframes fadeInProduct {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .product-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .product-item .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-item h4 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-item p {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .product-item .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #003366;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: auto;
+        }
+
+        footer small {
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1><a href="index.html">Mellysa Online Shop</a></h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="product.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Product Section -->
+    <div class="product-section">
+        <h2>Our Products</h2>
+    </div>
+
+    <div class="product-container">
+        <!-- Product Item 1 -->
+        <div class="product-item">
+            <img src="https://images.pexels.com/photos/322920/pexels-photo-322920.jpeg" alt="Product 1">
+            <div class="content">
+                <h4>HIJAB</h4>
+                <p>Perfect for everyday wear</p>
+                <div class="price">Rp 80.000</div>
+            </div>
+        </div>
+
+        <!-- Product Item 2 -->
+        <div class="product-item">
+            <img src="https://images.pexels.com/photos/29817608/pexels-photo-29817608.jpeg" alt="Product 2">
+            <div class="content">
+                <h4>ROK WANITA</h4>
+                <p>Stylish and comfortable</p>
+                <div class="price">Rp 200.000</div>
+            </div>
+        </div>
+
+        <!-- Product Item 3 -->
+        <div class="product-item">
+            <img src="https://images.pexels.com/photos/6996136/pexels-photo-6996136.jpeg" alt="Product 3">
+            <div class="content">
+                <h4>Kemeja Wanita</h4>
+                <p>Perfect for your workday</p>
+                <div class="price">Rp 170.000</div>
+            </div>
+        </div>
+
+        <!-- Product Item 4 -->
+        <div class="product-item">
+            <img src="https://images.pexels.com/photos/2285500/pexels-photo-2285500.jpeg" alt="Product 4">
+            <div class="content">
+                <h4>Sepatu Stiletto Hitam</h4>
+                <p>For your important events</p>
+                <div class="price">Rp 400.000</div>
+            </div>
+        </div>
+
+        <!-- Product Item 5 -->
+        <div class="product-item">
+            <img src="https://images.pexels.com/photos/22032446/pexels-photo-22032446.jpeg" alt="Product 5">
+            <div class="content">
+                <h4>Jam Tangan Daniel Wellington</h4>
+                <p>Elegant and stylish</p>
+                <div class="price">Rp 1.700.000</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <small>&copy; 2024 - Mellysa Online Shop. All Rights Reserved.</small>
+    </footer>
+
+</body>
+</html>
